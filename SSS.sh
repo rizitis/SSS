@@ -51,6 +51,7 @@ cat .sbopkg.conf
 sleep 3
 sbopkg -r
 wait
+sed -i 's/OPT_JOBS=1/OPT_JOBS=$(getconf _NPROCESSORS_ONLN)/' /usr/sbin/sqg
 sqg -a
 
 # slpkg
