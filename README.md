@@ -10,16 +10,16 @@ mkdir -p /opt/SSS && cd  /opt/SSS
 wget -c https://raw.githubusercontent.com/rizitis/SSS/main/SSS.sh
 chmod +x SSS.sh
 ./SSS.sh
-
+```
 ## NOTE
 This script is how I like my Slackware current system.
 But thats me...
 
 What this script does is:
-It EDIT rc.6 files and prepare them for:
+It EDIT rc.6 file and prepare it for:
 
 1. install auto-initrd, a script that every time 
-```
+
 ```
 slackpkg upgrade-all
 ```
