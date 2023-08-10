@@ -6,8 +6,9 @@ Script for setting up my new Slackware current installations
 # INSTALL
 After installation finish on first reboot command
 ```
-cd /opt || exit
-wget -c https://rb.gy/0yvlk
+su -l
+mkdir -p /opt/SSS && cd  /opt/SSS
+wget -c https://raw.githubusercontent.com/rizitis/SSS/main/SSS.sh
 chmod +x SSS.sh
 ./SSS.sh
 ```
