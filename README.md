@@ -2,7 +2,7 @@
 Slackware System Setup (SSS.sh)
 
 
-Script for setting up my new Slackware current installations
+Script that helping me setting up every new Slackware current installation
 # INSTALL
 After installation finish on first reboot command
 ```
