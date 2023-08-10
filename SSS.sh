@@ -107,6 +107,6 @@ echo "#!/bin/bash" > /etc/rc.d/rc.local_shutdown
 chmod +x /etc/rc.d/rc.local_shutdown
 bash adduser
 echo "so good, so far"
-sleep 2
+updatedb
 echo " use visudo to complete users permissions..."
 
