@@ -18,18 +18,18 @@ But thats me...
 What this script does is:
 It EDIT rc.6 file and prepare it for:
 
-1. install auto-initrd, a script that every time 
+1. install [autoslack-initrd](https://github.com/rizitis/autoslack-initrd), a script that every time 
 
 ```
 slackpkg upgrade-all
 ```
 upgrade systems kernel , then run mkinitrd and create a generic kernel without touching your custom kernel if existed.
 
-2) install slackup-grub, a script that everytime slackpkg upgrade your kernel then update-grub also before shutdown pc. If you have grub in the installation. 
+2) install [slackup-grub](https://github.com/rizitis/slackup-grub), a script that everytime slackpkg upgrade your kernel then update-grub also before shutdown pc. If you have grub in the installation. 
 ```
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
-3) install auto-elilo, a script that everytime slackpkg upgrade your kernel then before shutdown 
+3) install [auto-elilo](https://github.com/rizitis/auto-elilo), a script that everytime slackpkg upgrade your kernel then before shutdown 
 ```
  eliloconfig
 ```
@@ -46,9 +46,9 @@ OPT_JOBS=$(getconf _NPROCESSORS_ONLN)
 To take the maximum power of your CPU.
 
 5) install slpkg. To setup slpkg repos properly is your hand job...
-6) install GFS-tracker. A very usefull script if you have Gnome in your installation. 
+6) install [GFS-tracker](https://github.com/rizitis/GFS-tracker). A very usefull script if you have Gnome in your installation. 
 7) install SBKS. A tool for easy build and install your own custom generic kernels in your Slackware system. Also install zenity from ponce repo. zenity is dep for SBKS.
-8) install Slackware-Commander. A gtkdialog and yad tool for easy maintain and control your Slackware system. gtkdialog and yad are deps and script installs them from ponce repo.
+8) install [Slackware-Commander](https://github.com/rizitis/Slackware-Commander). A gtkdialog and yad tool for easy maintain and control your Slackware system. gtkdialog and yad are deps and script installs them from ponce repo.
 9) set pipewire-enable... after reboot as always in Slack...
 10) create a rc.local_shutdown file...
 11) execute adduser command, to create your first user in the system. visudo is your job after that...
