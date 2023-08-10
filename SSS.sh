@@ -27,6 +27,7 @@
 
 # autoslack-initrd, slackup-grub, auto-elilo #
 cd /etc/rc.d/  || exit 
+
 wget -c https://raw.githubusercontent.com/rizitis/autoslack-initrd/main/autoslack-initrd.sh
 chmod +x autoslack-initrd.sh
 # EDIT /etc/rc.d/rc.6
@@ -52,6 +53,10 @@ sed -i '86 i /etc/rc.d/slackup-grub.sh' rc.6
 wait
 sed -i '87 i fi' rc.6
 wait
+
+wget -c https://raw.githubusercontent.com/rizitis/auto-elilo/main/auto-elilo.sh
+chmod +x auto-elilo.sh
+# EDIT /etc/rc.d/rc.6
 sed -i '88 i # auto-elilo' rc.6
 wait
 sed -i '89 i if [ -x /etc/rc.d/auto-elilo.sh ]; then' rc.6
@@ -60,6 +65,8 @@ sed -i '90 i /etc/rc.d/auto-elilo.sh' rc.6
 wait
 sed -i '91 i fi' rc.6
 wait
+
+# Create database 
 bash /etc/rc.d/autoslack-initrd.sh
 wait 
 bash /etc/rc.d/slackup-grub.sh
