@@ -90,6 +90,7 @@ sbopkg -i my-queue.sqf
 cd /usr/local/bin/ || exit
 wget -c https://github.com/rizitis/GFS-tracker/archive/refs/heads/main.zip
 unzip main.zip && cd GFS-tracker-main/GFS-tracker.SlackBuild/
+chmod +x GFS-tracker.SlackBuild
 bash GFS-tracker.SlackBuild
 upgradepkg --install-new --reinstall /tmp/GFS-tracker-100-x86_64-1_rtz.tgz
 
@@ -98,7 +99,7 @@ wget -c https://raw.githubusercontent.com/rizitis/SBKS/main/SBKS
 chmod +x SBKS
 
 # System
-cd
+cd || exit
 bash pipewire-enable
 echo "http://slackware.uk/slackware/slackware64-current/" >> /etc/slackpkg/mirrors
 touch /etc/rc.d/rc.local_shutdown
