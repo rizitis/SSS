@@ -33,7 +33,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
  eliloconfig
 ```
-execute the rest of the job is yours...
+executed, the rest of the job is yours...
 
 4) install sbopkg, rsync it with ponce repo, and create package.sqf files for all SBo source packages. 
 ```
