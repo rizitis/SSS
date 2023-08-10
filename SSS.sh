@@ -25,7 +25,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# autoslack-initrd, slackup-grub #
+# autoslack-initrd, slackup-grub, auto-elilo #
 cd /etc/rc.d/  || exit 
 wget -c https://raw.githubusercontent.com/rizitis/autoslack-initrd/main/autoslack-initrd.sh
 chmod +x autoslack-initrd.sh
@@ -51,10 +51,20 @@ wait
 sed -i '86 i /etc/rc.d/slackup-grub.sh' rc.6
 wait
 sed -i '87 i fi' rc.6
+wait
+sed -i '88 i # auto-elilo' rc.6
+wait
+sed -i '89 i if [ -x /etc/rc.d/auto-elilo.sh ]; then' rc.6
+wait 
+sed -i '90 i /etc/rc.d/auto-elilo.sh' rc.6
+wait
+sed -i '91 i fi' rc.6
+wait
 bash /etc/rc.d/autoslack-initrd.sh
 wait 
 bash /etc/rc.d/slackup-grub.sh
 wait
+bash /etc/rc.d/auto-elilo.sh
 
 # Slackware-Commander #
 cd /tmp || exit
@@ -107,6 +117,11 @@ echo "#!/bin/bash" > /etc/rc.d/rc.local_shutdown
 chmod +x /etc/rc.d/rc.local_shutdown
 bash adduser
 echo "so good, so far"
-sleep 2
-echo " use visudo to complete users permissions..."
-
+echo ""
+echo "*********************************************"
+echo "*"
+echo "* visudo is  THE friend for your new user...*"
+echo "*"
+echo "*********************************************"
+echo ""
+neofetch
