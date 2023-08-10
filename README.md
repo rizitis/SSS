@@ -54,9 +54,9 @@ To take the maximum power of your CPU.
 11) execute adduser command, to create your first user in the system. visudo is your job after that...
 
 # REMEMBER
-This is my way, because I have to install more than often Slackware-current in Virtual Box to build and check Gnome SlackBuilds... And this tool save me some time, or help me to maintain better a Slackware system.
+This is my way, because I have to install more than often Slackware-current in Virtual Box to build and check Gnome SlackBuilds in a clean Slackware system... So this script save for me some time, or help me to maintain better a fresh Slackware system.
 
-So this script is written to ran ONE time after I finish my Slackware installation and reboot. 
-If you ran it more in one times at the same system, then your system will break. 
+So this script is written to ran only ONE time in every system, exactly after Slackware installation finish at first reboot. 
+If you ran it more than one time at the same system, then your system will break. 
 
-So if you DONT like all these I m doing, but you like some tools that script install, then feel free to find these tools in my github and install them or make them better... 
+So if you DONT like all these I m doing, but you like some of tools that script install, then feel free to find these tools in my github and install them separate or hack them and make them better... 
