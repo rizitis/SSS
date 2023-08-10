@@ -4,7 +4,7 @@ Slackware System Setup (SSS.sh)
 
 Script that helping me setting up every new Slackware current installation
 # INSTALL
-After installation finish on first reboot command
+After your NEW Slackware installation finish (VM or bare metal), on first reboot command
 ```
 su -l
 mkdir -p /opt/SSS && cd  /opt/SSS
