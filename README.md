@@ -6,7 +6,6 @@ Script that helping me setting up every new Slackware current installation
 # INSTALL
 After your NEW Slackware installation finish (VM or bare metal), on first reboot command
 ```
-su -l
 mkdir -p /opt/SSS && cd  /opt/SSS
 wget -c https://raw.githubusercontent.com/rizitis/SSS/main/SSS.sh
 chmod +x SSS.sh
