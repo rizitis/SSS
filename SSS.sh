@@ -108,5 +108,5 @@ chmod +x /etc/rc.d/rc.local_shutdown
 bash adduser
 echo "so good, so far"
 sleep 2
-bash visudo
+echo " use visudo to complete users permissions..."
 
