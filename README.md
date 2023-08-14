@@ -16,7 +16,7 @@ This script is how I like my Slackware current system.
 But thats me...
 
 What this script does is:
-It EDIT rc.6 file and prepare it for:
+It REPLACE OR EDIT rc.6 file and prepare it for (default is replace, better chose if you have stock slackware /etc/rc.d/rc.6):
 
 1. install [autoslack-initrd](https://github.com/rizitis/autoslack-initrd), a script that every time 
 
@@ -52,7 +52,7 @@ To take the maximum power of your CPU.
 9) set pipewire-enable... after reboot as always in Slack...
 10) create a rc.local_shutdown file...
 11) execute adduser command, to create your first user in the system. visudo is your job after that...
-12) install [aaa_kernels and zzz_kernels scripts](https://github.com/rizitis/kernelsANDboots) a compinations of
+12) install [aaa_kernels and zzz_kernels scripts](https://github.com/rizitis/kernelsANDboots) a compination of
 2 scripts that works together with autoslack-initrd and slackup-grub or auto-elilo. This scripts keeping the official slackware kernel in system when upgradepkg remove it when install new kernel. So you can have 2 officiall slackware kernels in your bootloader every time...
 
 # REMEMBER
