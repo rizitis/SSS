@@ -16,7 +16,7 @@ This script is how I like my Slackware current system.
 But thats me...
 
 What this script does is:
-It REPLACE OR EDIT rc.6 file and prepare it for (default is replace, better chose if you have stock slackware /etc/rc.d/rc.6):
+It REPLACE OR EDIT rc.6 file (default is replace, better chose if you have stock slackware /etc/rc.d/rc.6) and prepare it for:
 
 1. install [autoslack-initrd](https://github.com/rizitis/autoslack-initrd), a script that every time 
 
