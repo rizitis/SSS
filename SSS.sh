@@ -31,40 +31,40 @@ cd /etc/rc.d/  || exit
 wget -c https://raw.githubusercontent.com/rizitis/autoslack-initrd/main/autoslack-initrd.sh
 chmod +x autoslack-initrd.sh
 # EDIT /etc/rc.d/rc.6
-sed -i '79 i #' rc.6
-wait
-sed -i '80 i # autoslack-initrd' rc.6
-wait
-sed -i '81 i if [ -x /etc/rc.d/autoslack-initrd.sh ]; then' rc.6
-wait
-sed -i '82 i /etc/rc.d/autoslack-initrd.sh' rc.6
-wait
-sed -i '83 i fi' rc.6
+#sed -i '79 i #' rc.6
+#wait
+#sed -i '80 i # autoslack-initrd' rc.6
+#wait
+#sed -i '81 i if [ -x /etc/rc.d/autoslack-initrd.sh ]; then' rc.6
+#wait
+#sed -i '82 i /etc/rc.d/autoslack-initrd.sh' rc.6
+#wait
+#sed -i '83 i fi' rc.6
 
 
 wget -c https://raw.githubusercontent.com/rizitis/slackup-grub/main/slackup-grub.sh
 chmod +x /etc/rc.d/slackup-grub.sh
 # EDIT /etc/rc.d/rc.6
-sed -i '84 i # slackup-grub' rc.6
-wait
-sed -i '85 i if [ -x /etc/rc.d/slackup-grub.sh ]; then' rc.6
-wait
-sed -i '86 i /etc/rc.d/slackup-grub.sh' rc.6
-wait
-sed -i '87 i fi' rc.6
-wait
+#sed -i '84 i # slackup-grub' rc.6
+#wait
+#sed -i '85 i if [ -x /etc/rc.d/slackup-grub.sh ]; then' rc.6
+#wait
+#sed -i '86 i /etc/rc.d/slackup-grub.sh' rc.6
+#wait
+#sed -i '87 i fi' rc.6
+#wait
 
 wget -c https://raw.githubusercontent.com/rizitis/auto-elilo/main/auto-elilo.sh
 chmod +x auto-elilo.sh
 # EDIT /etc/rc.d/rc.6
-sed -i '88 i # auto-elilo' rc.6
-wait
-sed -i '89 i if [ -x /etc/rc.d/auto-elilo.sh ]; then' rc.6
-wait 
-sed -i '90 i /etc/rc.d/auto-elilo.sh' rc.6
-wait
-sed -i '91 i fi' rc.6
-wait
+#sed -i '88 i # auto-elilo' rc.6
+#wait
+#sed -i '89 i if [ -x /etc/rc.d/auto-elilo.sh ]; then' rc.6
+#wait 
+#sed -i '90 i /etc/rc.d/auto-elilo.sh' rc.6
+#wait
+#sed -i '91 i fi' rc.6
+#wait
 
 # Create database 
 bash /etc/rc.d/autoslack-initrd.sh
@@ -72,6 +72,36 @@ wait
 bash /etc/rc.d/slackup-grub.sh
 wait
 bash /etc/rc.d/auto-elilo.sh
+
+# aaa_kernels and zzz_kernels
+wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/aaa_kernels.sh
+chmod +x aaa_kernels.sh
+wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/zzz_kernels.sh
+chmod +x zzz_kernels.sh
+cd /tmp || exit
+wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.local
+cat rc.local >> /etc/rc.d/rc.local
+rm /tmp/rc.local
+
+#sed -i '84 i # zzz_kernels' rc.6
+#wait
+#sed -i '85 i if [ -x /etc/rc.d/zzz_kernels.sh ]; then' rc.6
+#wait
+#sed -i '86 i /etc/rc.d/zzz_kernels.sh' rc.6
+#wait
+#sed -i '87 i fi' rc.6
+#wait
+
+# CREATE NEW rc.6
+###########***********************###############****************************####################################
+#-------------- NOTE:   NOTE:   NOTE:   NOTE:   NOTE:    NOTE:    NOTE:   NOTE:   NOTE:    NOTE:-------------   #
+# If you use custom rc.6 then commend next 3 lines and uncommend ALL ^before  lines with sed -i commands        #
+###########***********************###############****************************####################################
+mv rc.6 rc.6.BAK
+wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.6
+chmod +x rc.6
+
+
 
 # Slackware-Commander #
 cd /tmp || exit
@@ -92,6 +122,7 @@ wait
 sed -i 's/OPT_JOBS=1/OPT_JOBS=$(getconf _NPROCESSORS_ONLN)/' /usr/sbin/sqg
 wait
 sqg -a
+wait
 
 # slpkg
 sbopkg -i slpkg
