@@ -97,6 +97,7 @@ rm /tmp/rc.local
 #-------------- NOTE:   NOTE:   NOTE:   NOTE:   NOTE:    NOTE:    NOTE:   NOTE:   NOTE:    NOTE:-------------   #
 # If you use custom rc.6 then commend next 3 lines and uncommend ALL ^before  lines with sed -i commands        #
 ###########***********************###############****************************####################################
+cd /etc/rc.d || exit
 mv rc.6 rc.6.BAK
 wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.6
 chmod +x rc.6
