@@ -129,11 +129,11 @@ wait
 sbopkg -i slpkg
 
 # DEPS
-touch my-queue.sqf
-echo "zenity" > my-queue.sqf
-echo "yad" >> my-queue.sqf
-echo "gtkdialog" >> my-queue.sqf
-sbopkg -i my-queue.sqf
+touch /var/lib/sbopkg/queues/my-queue.sqf
+echo "zenity" > /var/lib/sbopkg/queues/my-queue.sqf
+echo "yad" >> /var/lib/sbopkg/queues/my-queue.sqf
+echo "gtkdialog" >> /var/lib/sbopkg/queues/my-queue.sqf
+sbopkg -i /var/lib/sbopkg/queues/my-queue.sqf
 
 # GFS-tracker
 cd /usr/local/bin/ || exit
