@@ -10,6 +10,7 @@ mkdir -p /opt/SSS && cd  /opt/SSS
 wget -c https://raw.githubusercontent.com/rizitis/SSS/main/SSS.sh
 chmod +x SSS.sh
 ./SSS.sh
+rm SSS.sh
 ```
 ## NOTE
 This script is how I like my Slackware current system.
