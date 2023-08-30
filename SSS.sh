@@ -148,7 +148,7 @@ chmod +x SBKS
 # System
 cd || exit
 bash pipewire-enable
-echo "http://slackware.uk/slackware/slackware64-current/" >> /etc/slackpkg/mirrors
+echo "http://ftp.nluug.nl/os/Linux/distr/slackware/slackware64-current/" >> /etc/slackpkg/mirrors
 touch /etc/rc.d/rc.local_shutdown
 echo "#!/bin/bash" > /etc/rc.d/rc.local_shutdown
 chmod +x /etc/rc.d/rc.local_shutdown
