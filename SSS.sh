@@ -73,15 +73,18 @@ bash /etc/rc.d/slackup-grub.sh
 wait
 bash /etc/rc.d/auto-elilo.sh
 
+
+
+# it works but i dont like it as idea so... ## 
 # aaa_kernels and zzz_kernels
-wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/aaa_kernels.sh
-chmod +x aaa_kernels.sh
-wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/zzz_kernels.sh
-chmod +x zzz_kernels.sh
-cd /tmp || exit
-wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.local
-cat rc.local >> /etc/rc.d/rc.local
-rm /tmp/rc.local
+#wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/aaa_kernels.sh
+#chmod +x aaa_kernels.sh
+#wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/zzz_kernels.sh
+##chmod +x zzz_kernels.sh
+#cd /tmp || exit
+#wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.local
+#cat rc.local >> /etc/rc.d/rc.local
+#rm /tmp/rc.local
 
 #sed -i '84 i # zzz_kernels' rc.6
 #wait
@@ -92,18 +95,23 @@ rm /tmp/rc.local
 #sed -i '87 i fi' rc.6
 #wait
 
-# CREATE NEW rc.6
+# CREATE NEW rc.6 
 ###########***********************###############****************************####################################
 #-------------- NOTE:   NOTE:   NOTE:   NOTE:   NOTE:    NOTE:    NOTE:   NOTE:   NOTE:    NOTE:-------------   #
 # If you use custom rc.6 then commend next 3 lines and uncommend ALL ^before  lines with sed -i commands        #
 ###########***********************###############****************************####################################
-cd /etc/rc.d || exit
-mv rc.6 rc.6.BAK
-wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.6
-chmod +x rc.6
+#cd /etc/rc.d || exit
+#mv rc.6 rc.6.BAK
+#wget -c https://raw.githubusercontent.com/rizitis/kernelsANDboots/main/rc.6
+#chmod +x rc.6
 
 
-
+# since /etc/rc.d/rc.local_shutdown works ok, no reason to touch rc.6
+cd /tmp || exit
+wget -c https://raw.githubusercontent.com/rizitis/SSS/main/rc.local_shutdown
+touch /etc/rc.d/rc.local_shutdown
+cat rc.local_shutdown >> /etc/rc.d/rc.local_shutdown
+chmod +x /etc/rc.d/rc.local_shutdown
 # Slackware-Commander #
 cd /tmp || exit
 wget -c https://github.com/rizitis/Slackware-Commander/releases/download/0.7/Slackware-Commander-0.7-x86_64-1_rtz.tgz

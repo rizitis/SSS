@@ -7,3 +7,8 @@ fi
 if [ -x /etc/rc.d/slackup-grub.sh ]; then
    /etc/rc.d/slackup-grub.sh
 fi
+
+# auto-elilo
+if [ -x /etc/rc.d/auto-elilo.sh ]; then
+   /etc/rc.d/auto-elilo.sh
+fi
