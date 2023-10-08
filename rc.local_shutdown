@@ -1,0 +1,9 @@
+# autoslack-initrd
+if [ -x /etc/rc.d/autoslack-initrd.sh ]; then
+   /etc/rc.d/autoslack-initrd.sh
+fi
+
+# slackup-grub
+if [ -x /etc/rc.d/slackup-grub.sh ]; then
+   /etc/rc.d/slackup-grub.sh
+fi
