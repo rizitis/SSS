@@ -161,7 +161,7 @@ touch /etc/rc.d/rc.local_shutdown
 echo "#!/bin/bash" > /etc/rc.d/rc.local_shutdown
 chmod +x /etc/rc.d/rc.local_shutdown
 bash adduser
-echo "so good, so far"
+echo "so far,so good... "
 echo ""
 echo "*********************************************"
 echo "*"
